@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: fastapi-route
+  labels:
+    app: fastapi-server
+    deployment: fastapi-server
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+spec:
+  host: fastapi-your-project.apps.your-cluster.com  # Replace with your OpenShift cluster domain
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: fastapi-service
+    weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
