@@ -3,8 +3,16 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+
+# Secret
+infrastructure/k8s/sql/mysql-secret.yaml
+infrastructure/k8s/sql/mysql-secret.yaml/
+infrastructure\k8s\sql\mysql-secret.yaml
+
 # C extensions
 *.so
+
+.idea
 
 # Distribution / packaging
 .Python
